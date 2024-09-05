@@ -3,6 +3,6 @@ import './CartWidget.css'
 
 export default function CartWidget() {
   return (
-    <div className="Carrito">🛒 5</div>
+    <div className="Carrito">🛒 0</div>
   )
 }

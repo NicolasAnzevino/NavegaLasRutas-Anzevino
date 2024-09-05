@@ -1,0 +1,50 @@
+.barra{
+    display: flex;
+    background-color:rgb(12, 11, 75);
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 0px 10px 0px;
+    max-width: 100%;
+    height: 85px;
+}
+
+.logotipo{
+    color:#ffff;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 10px;
+}
+
+.logotipo h1{
+    margin-left:-30px;
+    font-size: 28px;
+}
+
+.logotipo img{
+    height: 140px;
+    margin-top:10px;
+}
+
+.logotipo:hover{
+    color:#ffff;
+}
+
+.barracontainer{
+    display: flex;
+    margin-right:10px;
+}
+
+.barracontaineritem{
+    color:#ffff;
+    margin:10px;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: inherit;
+}
+
+.barracontaineritem:hover {
+    color: #1E90FF ;
+  }
