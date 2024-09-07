@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="100px" src="./assets/logo.png" alt="Logo" />
+    <img width="150px" src="./src/assets/logo-black.png" alt="Logo" />
     <h1>Zona Pixel</h1>
 </div>
 
