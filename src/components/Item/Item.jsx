@@ -11,7 +11,7 @@ export default function Item({product}) {
             alt={product?.nombre}
         />
         <p>{product?.descripcion}</p>
-        <p>Precio: ${product?.precio}</p>
+        <p className={styles.precio}>${product?.precio}</p>
         <Link to={`/detalle/${product.id}`} className={styles.botonDetalle}>Ver más</Link>
     </div>
   );

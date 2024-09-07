@@ -50,5 +50,5 @@
 }
 
 .barracontaineritem:hover {
-    color: #1E90FF ;
-  }
+    filter: drop-shadow(0 0 0.2em #1E90FF);
+}

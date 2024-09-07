@@ -4,9 +4,16 @@
     border: 1px solid #444444;
     border-radius: 15px;
     width: 460px;
-    height: 380px;
+    height: 400px;
     margin: 15px;
+    transition: background-color 0.1s ease, border-color 0.1s ease;
 }
+
+.item:hover {
+    background-color: #3e3e3e;
+    border-color: #606060;
+}
+
 
 img{
     width: 150px;
@@ -28,5 +35,9 @@ img{
   
 .botonDetalle:hover {
     background-color: #FF6347;
+}
+
+.precio{
+    font-size: larger;
 }
   

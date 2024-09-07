@@ -1,8 +1,8 @@
 import React from 'react'
-import './CartWidget.css'
+import styles from './CartWidget.module.css'
 
 export default function CartWidget() {
   return (
-    <div className="Carrito">🛒 0</div>
+    <div className={styles.Carrito}>🛒 0</div>
   )
 }

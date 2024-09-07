@@ -14,7 +14,7 @@ export default function ItemDetail({product}) {
         <p>{product?.descripcion}</p>
       </div>
       <div className={styles.itemsecondary}>
-        <p className={styles.price}>Precio: ${product?.precio}</p>
+        <p className={styles.price}>${product?.precio}</p>
         <p>Cantidad Disponible: {product?.stock}</p>     
         <QuantitySelector/>
         <button className={styles.botonComprar}>Agregar al carrito</button>
