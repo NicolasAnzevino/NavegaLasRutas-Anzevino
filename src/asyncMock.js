@@ -20,7 +20,7 @@ const products = [
     {
       id: 3,
       nombre: "Intel Core i5-11600K",
-      precio: 330.000,
+      precio: 330.999,
       stock: 20,
       descripcion: "Procesador Intel Core i5-11600K de 6 núcleos y 12 hilos con velocidad de reloj de hasta 4.9 GHz.",
       categoria: "Microprocesadores",
@@ -65,7 +65,7 @@ const products = [
     {
       id: 8,
       nombre: "Corsair iCUE 4000X RGB",
-      precio: 290.000,
+      precio: 290.999,
       stock: 10,
       descripcion: "Gabinete Corsair iCUE 4000X RGB Mid Tower con iluminación RGB personalizable y panel lateral de vidrio templado.",
       categoria: "Gabinetes",
