@@ -1,33 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchProducts } from '../../asyncMock.js';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import styles from './ItemDetailContainer.module.css'
+import styles from './ItemDetailContainer.module.css';
+import { obtenerProducto } from '../../firebase/db.js';
 
 export default function ItemDetailContainer() {
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState(null); 
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
   const { id } = useParams();
 
   useEffect(() => {
     setLoading(true);
-    fetchProducts().then((data) => {
-      const foundProduct = data.find((p) => p.id === parseInt(id));
-      setProduct(foundProduct);
-      setLoading(false);
-    }).catch((error) => {
-      console.error("Error al obtener el producto", error);
-      setLoading(false);
-    });
+    setError(null);
+
+    obtenerProducto(id)
+      .then((producto) => {
+        setProduct(producto);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error al obtener el producto", error);
+        setError(error.message);
+        setLoading(false);
+      });
   }, [id]);
 
   if (loading) {
-    return <p>Cargando...</p>;
+    return <span className={styles.loader}></span>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
   }
 
   return (
-    <div className={styles.containerproducto} >
-      {product ? <ItemDetail product={product}/> : <p>Producto no encontrado.</p>}
+    <div className={styles.containerproducto}>
+      {product ? <ItemDetail product={product} /> : <p>Producto no encontrado.</p>}
     </div>
   );
 }

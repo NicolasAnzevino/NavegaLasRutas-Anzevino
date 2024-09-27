@@ -9,3 +9,19 @@
 .Carrito:hover{
     cursor: pointer;
 }
+
+.Carrito button{
+    background-color: transparent;
+    border:  none;
+    font-weight: bold;
+}
+
+.Carrito button:hover{
+    background-color: transparent;
+    border:  none;
+    cursor: pointer;
+}
+
+.Carrito:hover {
+    filter: drop-shadow(0 0 0.20em #FFFF);
+}
