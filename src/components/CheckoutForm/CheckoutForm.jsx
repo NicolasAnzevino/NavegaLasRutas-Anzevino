@@ -1,11 +1,11 @@
 import React from 'react';
 import { useCartContext } from '../../context/cartContext';
 import { crearOrden } from '../../firebase/db';
-import styles from './Checkout.module.css';
+import styles from './CheckoutForm.module.css';
 import { serverTimestamp } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
-export default function Checkout() {
+export default function CheckoutForm() {
     const { cart, getTotal, clearCart } = useCartContext();
     const navigate = useNavigate();
 
